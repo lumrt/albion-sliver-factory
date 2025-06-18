@@ -1,4 +1,87 @@
-# Albion Online - Market Scanner
+# Albion Online - The Market Scanner 🇺🇸
+
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+An interactive command-line tool to analyze the Albion Online economy and discover the most profitable crafting opportunities.
+
+The script asks the user a series of questions, fetches real-time market prices, calculates material costs, station taxes, and profit with/without focus, then exports a comprehensive report to an Excel file.
+
+## Core Features
+
+-   **Interactive Interface:** No coding required. Just launch the script and answer the questions.
+-   **Real-Time Data:** Uses the [Albion Online Data Project](https://www.albion-online-data.com/) API for up-to-date prices.
+-   **Advanced Profit Calculation:** Takes into account station taxes (configurable) and Resource Return Rate (RRR) with and without Focus.
+-   **Opportunity Discovery:** Scans entire item categories (armor, weapons, mounts...) to find profitable niches.
+-   **Customizable Sorting:** Sort the final report by profitability, focus efficiency, or item name.
+-   **Excel Export:** Generates a clean and easy-to-analyze `.xlsx` file.
+
+## Interface Preview
+
+```
+=======================================================
+     The Market Scanner v4.1 - INTERACTIVE SORTING
+=======================================================
+Welcome! Please configure your analysis session.
+
+--- Which categories would you like to analyze? ---
+  [1] ARMOR_CLOTH
+  [2] ARMOR_LEATHER
+  [3] ARMOR_PLATE
+  ...
+Enter the number(s) separated by a comma (e.g., 1,3):
+```
+
+## Quick Start (for Non-Developers)
+
+Follow these steps to use the tool.
+
+### Prerequisite
+-   **Python 3.9 or newer.** If you don't have it, download it from [python.org](https://www.python.org/downloads/).
+    -   **Important for Windows users:** During installation, check the box that says **"Add Python to PATH"**.
+
+### Installation & Launch
+
+1.  **Download the Project**
+    -   Click the green `<> Code` button at the top of the GitHub page, then `Download ZIP`.
+    -   Unzip the file into a folder on your computer (e.g., on your Desktop).
+
+2.  **Run the Analysis**
+    -   **On Windows:** Simply double-click the `lancer_analyse.bat` file.
+    -   **On macOS:**
+        -   **First time only:** Open the `Terminal` app, type `chmod +x `, then drag and drop the `lancer_analyse_mac.sh` file into the window, and press Enter. This grants execution permission.
+        -   **To launch:** Double-click `lancer_analyse_mac.sh` (or drag it into a Terminal window and press Enter).
+
+3.  **Answer the Questions**
+    -   The terminal window will open and guide you through selecting categories, tiers, etc.
+
+4.  **Check the Results**
+    -   Once the analysis is complete, a `results_scan_... .xlsx` file will appear in the folder.
+
+## Configuration
+
+-   **Scan criteria** (tiers, categories) are chosen interactively on each run.
+-   **City taxes** can be adjusted in the `config.ini` file before running the script.
+
+## For Developers: Expanding the Database
+
+The power of the scanner lies in its `RECIPE_DATABASE`. To add new items:
+
+1.  Open the `market_scanner.py` file.
+2.  Locate the `RECIPE_DATABASE = { ... }` variable.
+3.  Add your new recipe following the existing format. Be sure to include the `name`, `category`, `fame`, and `materials` keys.
+4.  Extend the `FAME_TO_FOCUS_COST` dictionary if your item has a fame value that is not already listed.
+5.  That's it! The script will automatically detect the new category and items on the next run.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Acknowledgments
+
+This tool would not be possible without the amazing work of the **Albion Online Data Project** community.
+
+# Albion Online - Market Scanner 🇫🇷
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)

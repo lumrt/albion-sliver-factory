@@ -1,4 +1,4 @@
-# Albion Online - Le Scanner de Marché
+# Albion Online - Market Scanner
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
